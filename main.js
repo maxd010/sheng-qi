@@ -1,5 +1,6 @@
 
-let isRaiseing = false
+let isRaiseing = false;
+let speed = 0;
 
 
 function playMusic() {
@@ -13,12 +14,11 @@ function raiseFlag() {
     let bottom = 0;
     let opacity = 0;
     const pole = document.querySelector('#pole')
-    console.log("clientHeight:"+pole.clientHeight)
-    console.log(pole.offectTop)
-    console.log(pole.clientHeight)
+    isRaiseing = true;
+    speed = pole.clientHeight/(49*100);
     
     const timer = setInterval(() => {
-        bottom += 1;
+        bottom += speed;
         opacity += 0.1;
 
         flag.style.bottom = `${bottom}px`;
@@ -30,17 +30,15 @@ function raiseFlag() {
         if (bottom >= pole.clientHeight-64) {
             clearInterval(timer);
         }
-    }, 5);
-    isRaiseing = true
-
+    }, 10);
+   
 }
 
 function handleStart () {
     if(isRaiseing !=true){
         playMusic();
         setTimeout(raiseFlag, 1000);
-    }
-   
+    }  
     
 }
 

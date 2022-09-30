@@ -10,6 +10,8 @@
 
     <script type="text/javascript" src=""></script>
     <link rel="stylesheet" type="text/css" href="main.css" />
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+
 
 </head>
 
@@ -18,14 +20,15 @@
 
     <div class="box">
         <div id="pole"></div>
-        <div id="flag"></div>
+        <lottie-player id="flag" src="flag.json" background="transparent" speed="1" style="width: 120px; height: 100px;"
+            loop autoplay></lottie-player>
     </div>
     <div class="bottom">
-        <a id="start">升旗</a>
+        <a id="start" href="#">升旗</a>
     </div>
 
-
     <script type="application/javascript" src="main.js"></script>
+
 </body>
 
 </html>

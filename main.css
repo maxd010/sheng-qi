@@ -73,13 +73,9 @@ h1 {
 }
 
 #flag {
-  width: 100px;
-  height: 60px;
   position: absolute;
-  left: 50%;
+  transform: translateX(56px);
   bottom: 0;
-  background: url(flag.gif) no-repeat;
-  background-size: contain;
   opacity: 0;
 }
 
@@ -91,6 +87,7 @@ h1 {
   color: #fff;
   border-radius: 32px;
   margin-right: 100px;
+  text-decoration: none;
 }
 
 #start:hover,
