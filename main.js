@@ -1,6 +1,9 @@
+
+let isRaiseing = false
+
+
 function playMusic() {
     const flag = document.querySelector('#flag');
-
     const audio = new Audio();
     audio.src = 'music.wav';
     audio.play();
@@ -9,26 +12,36 @@ function playMusic() {
 function raiseFlag() {
     let bottom = 0;
     let opacity = 0;
+    const pole = document.querySelector('#pole')
+    console.log("clientHeight:"+pole.clientHeight)
+    console.log(pole.offectTop)
+    console.log(pole.clientHeight)
     
     const timer = setInterval(() => {
-        bottom += 0.1;
-        opacity += 0.008;
+        bottom += 1;
+        opacity += 0.1;
 
         flag.style.bottom = `${bottom}px`;
+        console.log(flag.style.bottom)
 
         if (opacity <= 1) {
             flag.style.opacity = opacity;
         }
-
-        if (bottom >= 500 - 60) {
+        if (bottom >= pole.clientHeight-64) {
             clearInterval(timer);
         }
-    }, 10);
+    }, 5);
+    isRaiseing = true
+
 }
 
 function handleStart () {
-    playMusic();
-    setTimeout(raiseFlag, 1000);
+    if(isRaiseing !=true){
+        playMusic();
+        setTimeout(raiseFlag, 1000);
+    }
+   
+    
 }
 
 const startBtn = document.querySelector('#start');

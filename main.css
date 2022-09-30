@@ -1,22 +1,106 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: linear-gradient(
+      180deg,
+      #a8e0ff 0%,
+      #ffffff 28.65%,
+      #f7f4ed 85.36%
+    )
+    #f7f4ed no-repeat;
+  overflow: hidden;
+  height: 100%;
+  wigth: 100%;
+}
+h1 {
+  position: absolute;
+  padding: 50px;
+  color: #1c7ed6;
+  width: 100%;
+}
 .box {
-    height: 500px;
-    position: relative;
+  position: relative;
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #pole {
-    width: 10px;
-    height: 100%;
-    background-color: #ebd223;
+  position: relative;
+  width: 16px;
+  height: 90%;
+  border-radius: 4px;
+  background: linear-gradient(
+    90deg,
+    #dfe4e8 0%,
+    rgba(135, 148, 156, 0.745122) 23.44%,
+    #eaf3f8 70.31%,
+    rgba(167, 180, 188, 0.684951) 100%
+  );
+  align-self: flex-end;
+}
+#pole:before {
+  position: absolute;
+  top: -20px;
+  left: -4px;
+  width: 24px;
+  height: 24px;
+  content: " ";
+  border-radius: 16px;
+  background: radial-gradient(
+    59.78% 58.57% at 60% 38.1%,
+    #ffffff 0%,
+    #e8f1f5 15.63%,
+    #acb2b7 78.65%,
+    #a6a3aa 10%
+  );
+  z-index: -1;
+}
+#pole:after {
+  position: absolute;
+  bottom: -90px;
+  left: -257px;
+  width: 530px;
+  height: 100px;
+  content: " ";
+  border-radius: 3px 3px 0 0;
+  background: url(base.svg) no-repeat center center;
+  z-index: -1;
 }
 
 #flag {
-    width: 100px;
-    height: 60px;
-    background-color: red;
-    position: absolute;
-    left: 10px;
-    bottom: 0;
-    background-image: url(flag.gif);
-    background-size: contain;
-    opacity: 0;
+  width: 100px;
+  height: 60px;
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  background: url(flag.gif) no-repeat;
+  background-size: contain;
+  opacity: 0;
+}
+
+#start,
+#start:visited {
+  padding: 12px 32px;
+  display: inline-block;
+  background-color: #c92a2a;
+  color: #fff;
+  border-radius: 32px;
+  margin-right: 100px;
+}
+
+#start:hover,
+#start:active {
+  background-color: #e03131;
+  color: #fff;
+}
+.bottom {
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
 }
