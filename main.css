@@ -4,6 +4,8 @@
 }
 
 body {
+  height: 100%;
+  width: 100%;
   background: linear-gradient(
       180deg,
       #a8e0ff 0%,
@@ -11,15 +13,14 @@ body {
       #f7f4ed 85.36%
     )
     #f7f4ed no-repeat;
-  overflow: hidden;
-  height: 100%;
-  wigth: 100%;
 }
 h1 {
   position: absolute;
-  padding: 50px;
   color: #1c7ed6;
   width: 100%;
+  font-size: 18px;
+  margin-top: 20px;
+  margin-left: 20px;
 }
 .box {
   position: relative;
@@ -86,7 +87,6 @@ h1 {
   background-color: #c92a2a;
   color: #fff;
   border-radius: 32px;
-  margin-right: 100px;
   text-decoration: none;
 }
 
@@ -99,5 +99,5 @@ h1 {
   height: 10vh;
   display: flex;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: center;
 }
